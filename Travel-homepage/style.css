@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  line-height: 2;
+  color: #333;
+  background: #f9f9f9;
+  margin: 0;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 40px;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  color: #fff;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url("images/hero-section-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 20px 20px;
+  color: #fff;
+  position: relative;
+  margin-top: 10px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero h1,
+.hero p,
+.hero .btn-primary {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background: #ffcc00;
+  padding: 12px 30px;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #e6b800;
+}
+
+/* Services */
+.services {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.service-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #b7b6b6;
+  padding: 30px;
+  border-radius: 8px;
+  width: 280px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Destinations */
+.destinations {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.destinations h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.destination {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 6px #000;
+}
+
+/* CTA Section */
+.cta {
+  padding: 60px 20px;
+  background: #002244;
+  text-align: center;
+  color: #fff;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: centre;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    width: 70%;
+    height: 30vh;
+    margin: 10px;
+  }
+
+  .hero {
+    padding: 80px 40px 10px;
+    height: 100%;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+    margin-top: 16rem;
+  }
+  .hero p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
